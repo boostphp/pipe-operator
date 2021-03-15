@@ -1,0 +1,36 @@
+{
+    "name": "boostphp/pipe-operator",
+    "description": "The only way to implement the pipe operator in PHP.",
+    "homepage": "https://github.com/boostphp/pipe-operator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maarten Buis",
+            "email": "buismaarten@outlook.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Boost\\PipeOperator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Boost\\PipeOperator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
