@@ -27,6 +27,17 @@ class PipeOperator
     }
 
     /**
+     * Create a new class instance.
+     *
+     * @param  mixed  $value
+     * @return self
+     */
+    public static function from($value): self
+    {
+        return new self($value);
+    }
+
+    /**
      * Dynamically call the piped function.
      *
      * @param  string  $name
@@ -54,7 +65,7 @@ class PipeOperator
      * @param  callable  $callback
      * @return $this
      */
-    public function pipe(callable $callback)
+    public function pipe(callable $callback): self
     {
         $this->value = $callback($this->value);
 

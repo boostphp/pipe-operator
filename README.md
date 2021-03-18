@@ -52,6 +52,21 @@ $result = (new PipeOperator('https://blog.github.com'))
 // blog
 ```
 
+You can also use the `from` static constructor:
+
+```php
+use Boost\PipeOperator\PipeOperator as Pipe;
+
+$result = Pipe::from('https://blog.github.com')
+    ->parse_url()
+    ->end()
+    ->explode('.', PIPED_VALUE)
+    ->reset()
+    ->get();
+
+// blog
+```
+
 ### Using closures
 
 You could also use closures for more flexibility:

@@ -30,4 +30,19 @@ class PipeOperatorTest extends TestCase
 
         $this->assertSame('tvguho.pbz', $result);
     }
+
+    /**
+     * @test
+     */
+    public function it_can_operate_on_values_passed_with_the_from_static_constructor()
+    {
+        $result = PipeOperator::from('https://blog.github.com')
+            ->parse_url()
+            ->end()
+            ->explode('.', PIPED_VALUE)
+            ->reset()
+            ->get();
+
+        $this->assertSame('blog', $result);
+    }
 }
