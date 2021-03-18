@@ -1,7 +1,8 @@
 # Pipe Operator in PHP
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/boostphp/pipe-operator.svg?style=flat-square)](https://packagist.org/packages/boostphp/pipe-operator)
-[![Total Downloads](https://img.shields.io/packagist/dt/boostphp/pipe-operator.svg?style=flat-square)](https://packagist.org/packages/boostphp/pipe-operator)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/boostphp/pipe-operator.svg?style=flat)](https://packagist.org/packages/boostphp/pipe-operator)
+[![Total Downloads](https://img.shields.io/packagist/dt/boostphp/pipe-operator.svg?style=flat)](https://packagist.org/packages/boostphp/pipe-operator)
+![Twitter Follow](https://img.shields.io/twitter/follow/boostphp)
 
 ## Introduction
 
