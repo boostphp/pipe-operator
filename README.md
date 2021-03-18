@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/boostphp/pipe-operator.svg?style=flat)](https://packagist.org/packages/boostphp/pipe-operator)
 [![Total Downloads](https://img.shields.io/packagist/dt/boostphp/pipe-operator.svg?style=flat)](https://packagist.org/packages/boostphp/pipe-operator)
-[![GitHub](https://img.shields.io/github/license/boostphp/pipe-operator.svg?style=flat)](https://github.com/boostphp/pipe-operator)
+[![GitHub](https://img.shields.io/github/license/boostphp/pipe-operator.svg?style=flat)](https://github.com/boostphp/pipe-operator)<br />
 [![Total Downloads](https://img.shields.io/twitter/follow/boostphp.svg?style=social)](https://twitter.com/boostphp)
 
 ## Introduction
