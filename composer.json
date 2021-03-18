@@ -1,6 +1,13 @@
 {
     "name": "boostphp/pipe-operator",
     "description": "The only way to implement the pipe operator in PHP.",
+    "keywords": [
+        "php",
+        "library",
+        "boostphp",
+        "pipe-operator",
+        "chaining"
+    ],
     "homepage": "https://github.com/boostphp/pipe-operator",
     "license": "MIT",
     "authors": [
