@@ -44,22 +44,7 @@ You could use the package like this:
 ```php
 use Boost\PipeOperator\PipeOperator;
 
-$result = (new PipeOperator('https://blog.github.com'))
-    ->parse_url()
-    ->end()
-    ->explode('.', PIPED_VALUE)
-    ->reset()
-    ->get();
-
-// blog
-```
-
-You can also use the `from` static constructor:
-
-```php
-use Boost\PipeOperator\PipeOperator as Pipe;
-
-$result = Pipe::from('https://blog.github.com')
+$result = PipeOperator::from('https://blog.github.com')
     ->parse_url()
     ->end()
     ->explode('.', PIPED_VALUE)
@@ -76,7 +61,7 @@ You could also use closures for more flexibility:
 ```php
 use Boost\PipeOperator\PipeOperator;
 
-$result = (new PipeOperator('https://blog.github.com'))
+$result = PipeOperator::from('https://blog.github.com')
     ->pipe(fn ($value) => md5($value))
     ->pipe(fn ($value) => sprintf('prefixed-%s', $value))
     ->get();

@@ -38,28 +38,6 @@ class PipeOperator
     }
 
     /**
-     * Dynamically call the piped function.
-     *
-     * @param  string  $name
-     * @param  array  $arguments
-     * @return mixed
-     */
-    public function __call(string $name, array $arguments)
-    {
-        if (! in_array(PIPED_VALUE, $arguments)) {
-            $arguments = array_merge([PIPED_VALUE], $arguments);
-        }
-
-        return $this->pipe(function ($value) use ($name, $arguments) {
-            foreach ($arguments as &$argument) {
-                $argument = (($argument === PIPED_VALUE) ? $value : $argument);
-            }
-
-            return $name(...$arguments);
-        });
-    }
-
-    /**
      * Execute the given callback on the current value.
      *
      * @param  callable  $callback
@@ -80,5 +58,27 @@ class PipeOperator
     public function get()
     {
         return $this->value;
+    }
+
+    /**
+     * Dynamically call the piped function.
+     *
+     * @param  string  $name
+     * @param  array  $arguments
+     * @return mixed
+     */
+    public function __call(string $name, array $arguments)
+    {
+        if (! in_array(PIPED_VALUE, $arguments)) {
+            $arguments = array_merge([PIPED_VALUE], $arguments);
+        }
+
+        return $this->pipe(function ($value) use ($name, $arguments) {
+            foreach ($arguments as &$argument) {
+                $argument = (($argument === PIPED_VALUE) ? $value : $argument);
+            }
+
+            return $name(...$arguments);
+        });
     }
 }
