@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Boost\\PipeOperator\\": "src"
+            "Boost\\PipeOperator\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Boost\\PipeOperator\\Tests\\": "tests"
+            "Boost\\PipeOperator\\Tests\\": "tests/"
         }
     },
     "scripts": {
